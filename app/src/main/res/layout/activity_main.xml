@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/IdTextTitulo"
+        android:layout_width="390dp"
+        android:layout_height="51dp"
+        android:background="#145966"
+        android:padding="10dp"
+        android:text="HamburgueriaZ"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007" />
+
+
+    <ImageView
+        android:id="@+id/IdLogo"
+        android:layout_width="368dp"
+        android:layout_height="152dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/IdFacaSeuPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTextTitulo"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <TextView
+        android:id="@+id/IdFacaSeuPedido"
+        style="@style/EstiloTexto"
+        android:text="Faça seu pedido!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTextTitulo"
+        app:layout_constraintVertical_bias="0.269" />
+
+    <EditText
+        android:id="@+id/IdInputNome"
+        android:layout_width="363dp"
+        android:layout_height="48dp"
+        android:hint="Digite seu nome"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdFacaSeuPedido"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="103dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTextTitulo"
+        app:layout_constraintVertical_bias="0.516">
+
+        <CheckBox
+            android:id="@+id/checkBoxBacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bacon" />
+
+        <CheckBox
+            android:id="@+id/checkBoxQueijo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queijo" />
+
+        <CheckBox
+            android:id="@+id/checkBoxOnionRings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Onion Rings" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/IdQuantidade"
+        style="@style/EstiloTexto"
+        android:text="QUANTIDADE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="152dp"
+        android:layout_height="53dp"
+        android:layout_margin="50dp"
+        android:paddingLeft="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.046"
+        tools:layout_editor_absoluteX="10dp">
+
+        <Button
+            android:id="@+id/IdButtonSubtrair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#145966"
+            android:text="-"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="521dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="0"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/IdButtonAdicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#145966"
+            android:text="+"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="521dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/IdResumoPedido"
+        style="@style/EstiloTexto"
+        android:text="RESUMO DO PEDIDO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/IdValorTotal"
+        style="@style/EstiloTexto"
+        android:text="R$ 0,00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdResumoPedido"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#145966"
+        android:padding="10dp"
+        android:paddingLeft="15dp"
+        android:text="Enviar Pedido"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdValorTotal"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
