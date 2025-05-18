@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -16,21 +15,17 @@ import android.content.Intent;
 import android.net.Uri;
 import android.content.ActivityNotFoundException;
 
-
 import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     EditText mQuantidade, mValorTotal, mInputNome;
     CheckBox checkBoxBacon, checkBoxQueijo, checkBoxOnionRings;
     TextView mResumoPedido;
-
     final int VALOR_HAMBURGUER = 20;
     final int VALOR_BACON = 2;
     final int VALOR_QUEIJO = 2;
     final int VALOR_ONION = 3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +39,9 @@ public class MainActivity extends AppCompatActivity {
         mValorTotal = findViewById(R.id.IdValorTotal);
         mInputNome = findViewById(R.id.IdInputNome);
         mResumoPedido = findViewById(R.id.IdResumoPedido);
-
         checkBoxBacon = findViewById(R.id.checkBoxBacon);
         checkBoxQueijo = findViewById(R.id.checkBoxQueijo);
         checkBoxOnionRings = findViewById(R.id.checkBoxOnionRings);
-
-
 
         mButtonAdicionar.setOnClickListener(v -> {
             alterarQuantidade(1);
@@ -72,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         checkBoxQueijo.setOnCheckedChangeListener((buttonView, isChecked) -> calcularValorTotal());
         checkBoxOnionRings.setOnCheckedChangeListener((buttonView, isChecked) -> calcularValorTotal());
     }
-
     private void alterarQuantidade(int valor) {
         int quantidade = getQuantidadeAtual();
         quantidade += valor;
@@ -80,12 +71,10 @@ public class MainActivity extends AppCompatActivity {
         mQuantidade.setText(String.valueOf(quantidade));
         calcularValorTotal();
     }
-
     private int getQuantidadeAtual() {
         String texto = mQuantidade.getText().toString();
         return texto.isEmpty() ? 0 : Integer.parseInt(texto);
     }
-
     private void calcularValorTotal() {
         int quantidade = getQuantidadeAtual();
         int valorBase = quantidade * VALOR_HAMBURGUER;
@@ -102,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
         int valorFinal = valorBase + adicionais;
         mValorTotal.setText("R$ " + valorFinal);
     }
-
     private void enviarPedido() {
         calcularValorTotal();
 
@@ -134,8 +122,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, "Nenhum aplicativo de e-mail encontrado", Toast.LENGTH_LONG).show();
         }
-
-
     }
-
 }
