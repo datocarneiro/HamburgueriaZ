@@ -1,6 +1,4 @@
-# HamburgueriaZ
-Claro! Aqui está um exemplo de **documentação acadêmica** para o aplicativo Android que simula uma hamburgueria. A estrutura segue um modelo comum para trabalhos de disciplinas de desenvolvimento de software móvel.
-
+# Aplicativo HamburgueriaZ
 ---
 
 # 📄 Documentação do Projeto — Aplicativo **HamburgueriaZ**
