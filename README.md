@@ -1,7 +1,5 @@
-# Aplicativo HamburgueriaZ
+# 📄 Aplicativo HamburgueriaZ
 ---
-
-# 📄 Documentação do Projeto — Aplicativo **HamburgueriaZ**
 
 ## 📚 Tecnologias Utilizadas
 
